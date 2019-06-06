@@ -29,13 +29,18 @@ public class InputHandler {
             System.out.println("what is it's name?");
             String name = scanner.next();
 
-            if(type.toLowerCase().equals("dog")) {
-                pets.add(new Dog(name));
-            }else if(type.toLowerCase().equals("cat")) {
-                pets.add(new Cat(name));
-            }else if(type.toLowerCase().equals("mouse")) {
-                pets.add(new Mouse(name));
-            }else System.out.println("invalid type");
+            createPet(type, name);
         }
+    }
+
+    public void createPet(String type, String name) {
+
+        if(type.toLowerCase().equals("dog")) {
+            pets.add(new Dog(name));
+        }else if(type.toLowerCase().equals("cat")) {
+            pets.add(new Cat(name));
+        }else if(type.toLowerCase().equals("mouse")) {
+            pets.add(new Mouse(name));
+        }else System.out.println("invalid type");
     }
 }
