@@ -4,15 +4,20 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class InputHandler {
-    Integer petNum;
-    ArrayList<Pet> pets;
-    Scanner scanner = new Scanner(System.in);
+    private Integer petNum;
+    public ArrayList<Pet> pets;
+    private Scanner scanner = new Scanner(System.in);
 
 
     public void getPetNum() {
-        
+
         System.out.println("How many pets do you have");
         petNum = scanner.nextInt();
+        if(petNum <= 0) {
+            System.out.println("invalid number, Enter a valid number");
+            petNum = scanner.nextInt();
+        }
+
         pets = new ArrayList<Pet>(petNum);
     }
 
