@@ -10,7 +10,7 @@ public class PetTest{
 
     @Test
     public void PetConstructorNoarguments() {
-        Pet c = new Pet();
+        Pet c = new Cat();
         String actual = c.getName();
         String expected = "fido";
 
@@ -19,7 +19,7 @@ public class PetTest{
 
     @Test
     public void PetConstructor() {
-        Pet c = new Pet("Bob");
+        Pet c = new Cat("Bob");
         String actual = c.getName();
         String expected = "Bob";
 
@@ -28,7 +28,7 @@ public class PetTest{
 
     @Test
     public  void speakTest() {
-        Pet c = new Pet();
+        Pet c = new Cat();
         String actual = c.speak();
         String expected = "yikes";
 
@@ -36,7 +36,7 @@ public class PetTest{
     }
     @Test
     public void getName() {
-        Pet c = new Pet();
+        Pet c = new Cat();
         String actual = c.getName();
         String expected = "fido";
 
@@ -45,7 +45,7 @@ public class PetTest{
 
     @Test
     public void setName() {
-        Pet c = new Pet();
+        Pet c = new Cat();
         c.setName("whatever");
         String actual = c.getName();
         String expected = "whatever";
