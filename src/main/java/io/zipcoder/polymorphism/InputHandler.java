@@ -1,7 +1,10 @@
 package io.zipcoder.polymorphism;
 
+import org.omg.CORBA.INTERNAL;
+
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class InputHandler {
     private Integer petNum;
@@ -12,10 +15,10 @@ public class InputHandler {
     public void getPetNum() {
 
         System.out.println("How many pets do you have");
-        petNum = scanner.nextInt();
+        petNum = inputPetNum();
         if(petNum <= 0) {
             System.out.println("invalid number, Enter a valid number");
-            petNum = scanner.nextInt();
+            petNum = inputPetNum();
         }
 
         pets = new ArrayList<Pet>(petNum);
@@ -25,10 +28,9 @@ public class InputHandler {
 
         for (int i = 0; i < petNum  ; i++) {
             System.out.println("What type of pet do you have?");
-            String type = scanner.next();
+            String type = inputType();
             System.out.println("what is it's name?");
-            String name = scanner.next();
-
+            String name = inputName();
             createPet(type, name);
         }
     }
@@ -43,4 +45,21 @@ public class InputHandler {
             pets.add(new Mouse(name));
         }else System.out.println("invalid type");
     }
+
+    public String inputType() {
+        String type = scanner.next();
+        return type;
+    }
+
+    public String inputName() {
+        String  name = scanner.next();
+        return name;
+    }
+
+    public  Integer inputPetNum(){
+        Integer petnum = scanner.nextInt();
+        return petnum;
+    }
 }
+
+
