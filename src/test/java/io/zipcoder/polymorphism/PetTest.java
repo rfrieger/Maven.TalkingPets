@@ -12,16 +12,16 @@ public class PetTest{
     public void PetConstructorNoarguments() {
         Pet c = new Cat();
         String actual = c.getName();
-        String expected = "fido";
+        String expected = "Jeff";
 
         Assert.assertEquals(actual,expected);
     }
 
     @Test
     public void PetConstructor() {
-        Pet c = new Cat("Bob");
+        Pet c = new Cat("fido");
         String actual = c.getName();
-        String expected = "Bob";
+        String expected = "fido";
 
         Assert.assertEquals(actual,expected);
     }
@@ -30,7 +30,7 @@ public class PetTest{
     public  void speakTest() {
         Pet c = new Cat();
         String actual = c.speak();
-        String expected = "yikes";
+        String expected = "Meow";
 
         Assert.assertEquals(actual, expected);
     }
@@ -38,7 +38,7 @@ public class PetTest{
     public void getName() {
         Pet c = new Cat();
         String actual = c.getName();
-        String expected = "fido";
+        String expected = "Jeff";
 
         Assert.assertEquals(actual, expected);
     }

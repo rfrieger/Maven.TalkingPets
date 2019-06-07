@@ -15,9 +15,7 @@ abstract class Pet {
         this.name =name;
     }
 
-    public String speak() {
-        return "yikes";
-    };
+    abstract String speak();
 
     public String getName() {
         return name;

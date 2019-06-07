@@ -10,7 +10,6 @@ public class Mouse extends Pet {
         super(name);
     }
 
-    @Override
     public String speak() {
         return "Mouse sound";
     }
