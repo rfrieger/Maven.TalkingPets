@@ -16,7 +16,7 @@ public class Pet {
     }
 
     public String speak() {
-        return "";
+        return "yikes";
     };
 
     public String getName() {
